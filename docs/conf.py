@@ -32,8 +32,8 @@ import overlincs_git
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode', 'sphinx.ext.napoleon', 'sphinx.ext.githubpages',
-              'sphinx.ext.intersphinx', 'nbsphinx', 'IPython.sphinxext.ipython_console_highlighting',
-              'sphinx.ext.imgconverter', 'sphinx_mdinclude'
+              'sphinx.ext.intersphinx',
+              'sphinx.ext.imgconverter', 'sphinx_mdinclude', 'sphinx_click'
               ]
 
 # Add the possibility to access python documentation.
@@ -89,6 +89,8 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
 
+html_favicon = 'olincs-logo.ico'
+html_logo = 'olincs-logo.png'
 
 # -- Options for HTML output -------------------------------------------
 

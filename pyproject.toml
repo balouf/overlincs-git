@@ -13,6 +13,14 @@ packages = [
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
 click = "^8.1.7"
+keyring = "^24.3.0"
+gitpython = "^3.1.40"
+filetype = "^1.2.0"
+appdirs = "^1.4.4"
+lxml = "^4.9.3"
+socketio-client = "0.5.7.4"
+pymongo = "^4.6.1"
+python-dateutil = "^2.8.2"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -24,15 +32,15 @@ tox = "^4.11.3"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^7.2.6"
-ipython = "^8.17.2"
-nbsphinx = "^0.9.3"
 sphinx-mdinclude = "^0.5.3"
 pydata-sphinx-theme = "^0.14.3"
+sphinx-click = "^5.1.0"
 
 
 
 [tool.poetry.scripts]
-overlincs_git = 'overlincs_git.cli:main'
+olincs = "overlincs_git.cli:cli"
+git-olincs = "overlincs_git.cli:cli"
 
 
 [build-system]

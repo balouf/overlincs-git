@@ -8,7 +8,6 @@ Welcome to OverLINCS Git's documentation!
    readme
    installation
    usage
-   tutorials/index
    reference/index
    contributing
    authors
