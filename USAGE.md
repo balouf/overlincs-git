@@ -1,7 +1,7 @@
 # Using OverLINCS Git
 
-[Overleaf Community Edition](OCE) doesn't provide native Git-like functionalities,
-but Irisa has built a nice [Git bridge](SLX) from which [OverLincs Git](OLG) builds upon.
+[Overleaf Community Edition][OCE] doesn't provide native Git-like functionalities,
+but Irisa has built a nice [Git bridge][SLX] from which [OverLincs Git][OLG] builds upon.
 
 The idea is to have a regular git installed locally,
 with an emulation of a remote git provided by the bridge.
@@ -10,7 +10,7 @@ In short:
 
 - Use `olincs` instead of `git` for `clone`, `push`, and `pull`, i.e. all remote interactions.
 - Use `git` for `commit` and `add`, i.e. purely local updates.
-- `git rm` is not fully supported. File deletion should be performed directly on [OverLincs](OL).
+- `git rm` is not fully supported. File deletion should be performed directly on [OverLincs][OL].
 - As a general rule, other commands should be avoided, OverLincs Git only addresses the basic pull/commit/push cycle.
 
 Note: you can also use `git olincs clone/pull/push` if you prefer.
@@ -69,7 +69,7 @@ $ git commit -a -m "Modification description"
 $ olincs push
 ```
 
-Note that [OverLincs Git](OLG) automatically performs a `pull` before `pushing` so you do not need to do it manually.
+Note that [OverLincs Git][OLG] automatically performs a `pull` before `pushing` so you do not need to do it manually.
 
 
 
