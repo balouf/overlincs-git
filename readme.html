@@ -38,8 +38,8 @@
     <script src="_static/documentation_options.js?v=01f34227"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'readme';</script>
+    <link rel="icon" href="_static/olincs-logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Installation" href="installation.html" />
@@ -116,8 +116,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="_static/olincs-logo.png" class="logo__image only-light" alt="OverLINCS Git 0.1.0 documentation - Home"/>
+    <script>document.write(`<img src="_static/olincs-logo.png" class="logo__image only-dark" alt="OverLINCS Git 0.1.0 documentation - Home"/>`);</script>
   
-    <p class="title logo__title">OverLINCS Git 0.1.0 documentation</p>
   
 </a></div>
     
@@ -153,14 +159,7 @@
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="usage.html">
-                        Usage
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="tutorials/index.html">
-                        Tutorials
+                        Using OverLINCS Git
                       </a>
                     </li>
                 
@@ -171,19 +170,19 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="contributing.html">
+                        Contributing
+                      </a>
+                    </li>
+                
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="contributing.html">
-                        Contributing
-                      </a>
-                    </li>
-                
-
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="authors.html">
                         Credits
@@ -317,14 +316,7 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="usage.html">
-                        Usage
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="tutorials/index.html">
-                        Tutorials
+                        Using OverLINCS Git
                       </a>
                     </li>
                 
@@ -335,19 +327,19 @@ document.write(`
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="contributing.html">
+                        Contributing
+                      </a>
+                    </li>
+                
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
                     More
                 </button>
                 <ul id="pst-nav-more-links-2" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="contributing.html">
-                        Contributing
-                      </a>
-                    </li>
-                
-
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="authors.html">
                         Credits
@@ -461,20 +453,27 @@ document.write(`
 <a class="reference external image-reference" href="https://github.com/balouf/overlincs-git/actions?query=workflow%3Adocs"><img alt="Documentation Status" src="https://github.com/balouf/overlincs-git/actions/workflows/docs.yml/badge.svg?branch=main" /></a>
 <a class="reference external image-reference" href="https://github.com/balouf/overlincs-git/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/balouf/overlincs-git" /></a>
 <a class="reference external image-reference" href="https://codecov.io/gh/balouf/overlincs-git/tree/main"><img alt="Code Coverage" src="https://codecov.io/gh/balouf/overlincs-git/branch/main/graphs/badge.svg" /></a>
-<p>Unofficial fork of python-sharelatex to manage overleaf.lincs.fr</p>
+<p><a class="reference external" href="OLG">OverLincs Git</a> is a git-bridge for the <a class="reference external" href="LINCS">LINCS</a> <a class="reference external" href="OL">Overleaf server</a>.</p>
+<p>It allows to clone, push, and pull between a local repository and the <a class="reference external" href="OL">Overleaf server</a>.</p>
+<p>Under the hood, <a class="reference external" href="OLG">OverLincs Git</a> is an unofficial fork of the great
+<a class="reference external" href="SLX">python-sharelatex</a> module that has been patched for <a class="reference external" href="OCE">Overleaf CE v4</a>.</p>
 <ul class="simple">
 <li><p>Free software: GNU General Public License v3</p></li>
 <li><p>Documentation: <a class="reference external" href="https://balouf.github.io/overlincs-git/">https://balouf.github.io/overlincs-git/</a>.</p></li>
 </ul>
 <section id="features">
 <h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
+<p>Provides a <code class="docutils literal notranslate"><span class="pre">olincs</span></code> CLI for interaction with the <a class="reference external" href="LINCS">LINCS</a> <a class="reference external" href="OL">Overleaf server</a>.</p>
 <ul class="simple">
-<li><p>TODO</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">olincs</span> <span class="pre">clone</span> <span class="pre">remote_url</span> <span class="pre">local_repo_name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">olincs</span> <span class="pre">pull</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">olincs</span> <span class="pre">push</span></code></p></li>
 </ul>
 </section>
 <section id="credits">
 <h2>Credits<a class="headerlink" href="#credits" title="Link to this heading">#</a></h2>
 <p>This package was created with <a class="reference external" href="https://github.com/audreyr/cookiecutter">Cookiecutter</a> and the <a class="reference external" href="https://balouf.github.io/package-helper-3/">Package Helper 3</a> project template.</p>
+<p>It is based on <a class="reference external" href="SLX">python-sharelatex</a>.</p>
 </section>
 </section>
 

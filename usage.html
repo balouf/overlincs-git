@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Usage &#8212; OverLINCS Git 0.1.0 documentation</title>
+    <title>Using OverLINCS Git &#8212; OverLINCS Git 0.1.0 documentation</title>
   
   
   
@@ -38,11 +38,11 @@
     <script src="_static/documentation_options.js?v=01f34227"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'usage';</script>
+    <link rel="icon" href="_static/olincs-logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tutorials" href="tutorials/index.html" />
+    <link rel="next" title="Reference" href="reference/index.html" />
     <link rel="prev" title="Installation" href="installation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -116,8 +116,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="_static/olincs-logo.png" class="logo__image only-light" alt="OverLINCS Git 0.1.0 documentation - Home"/>
+    <script>document.write(`<img src="_static/olincs-logo.png" class="logo__image only-dark" alt="OverLINCS Git 0.1.0 documentation - Home"/>`);</script>
   
-    <p class="title logo__title">OverLINCS Git 0.1.0 documentation</p>
   
 </a></div>
     
@@ -153,14 +159,7 @@
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        Usage
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="tutorials/index.html">
-                        Tutorials
+                        Using OverLINCS Git
                       </a>
                     </li>
                 
@@ -171,19 +170,19 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="contributing.html">
+                        Contributing
+                      </a>
+                    </li>
+                
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="contributing.html">
-                        Contributing
-                      </a>
-                    </li>
-                
-
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="authors.html">
                         Credits
@@ -317,14 +316,7 @@ document.write(`
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        Usage
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="tutorials/index.html">
-                        Tutorials
+                        Using OverLINCS Git
                       </a>
                     </li>
                 
@@ -335,19 +327,19 @@ document.write(`
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="contributing.html">
+                        Contributing
+                      </a>
+                    </li>
+                
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
                     More
                 </button>
                 <ul id="pst-nav-more-links-2" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="contributing.html">
-                        Contributing
-                      </a>
-                    </li>
-                
-
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="authors.html">
                         Credits
@@ -437,7 +429,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Usage</li>
+    <li class="breadcrumb-item active" aria-current="page">Using OverLINCS Git</li>
   </ul>
 </nav>
 </div>
@@ -454,12 +446,69 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h1>
-<p>To use OverLINCS Git in a project:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">overlincs_git</span>
+  <section id="using-overlincs-git">
+<h1>Using OverLINCS Git<a class="headerlink" href="#using-overlincs-git" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="OCE">Overleaf Community Edition</a> doesn’t provide native Git-like functionalities,
+but Irisa has built a nice <a class="reference external" href="SLX">Git bridge</a> from which <a class="reference external" href="OLG">OverLincs Git</a> builds upon.</p>
+<p>The idea is to have a regular git installed locally,
+with an emulation of a remote git provided by the bridge.</p>
+<p>In short:</p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">olincs</span></code> instead of <code class="docutils literal notranslate"><span class="pre">git</span></code> for <code class="docutils literal notranslate"><span class="pre">clone</span></code>, <code class="docutils literal notranslate"><span class="pre">push</span></code>, and <code class="docutils literal notranslate"><span class="pre">pull</span></code>, i.e. all remote interactions.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">git</span></code> for <code class="docutils literal notranslate"><span class="pre">commit</span></code> and <code class="docutils literal notranslate"><span class="pre">add</span></code>, i.e. purely local updates.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span></code> is not fully supported. File deletion should be performed directly on <a class="reference external" href="OL">OverLincs</a>.</p></li>
+<li><p>As a general rule, other commands should be avoided, OverLincs Git only addresses the basic pull/commit/push cycle.</p></li>
+</ul>
+<p>Note: you can also use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">olincs</span> <span class="pre">clone/pull/push</span></code> if you prefer.</p>
+<section id="cloning-an-overlincs-repository">
+<h2>Cloning an OverLincs repository<a class="headerlink" href="#cloning-an-overlincs-repository" title="Link to this heading">#</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>olincs<span class="w"> </span>clone<span class="w"> </span>REMOTE_URL<span class="w"> </span>LOCAL_DIRECTORY
 </pre></div>
 </div>
+<p>For example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>olincs<span class="w"> </span>clone<span class="w"> </span>https://overleaf.lincs.fr/project/6568a676f421bb1300173f2c<span class="w"> </span>mydir
+</pre></div>
+</div>
+</section>
+<section id="retrieve-remote-changes">
+<h2>Retrieve remote changes<a class="headerlink" href="#retrieve-remote-changes" title="Link to this heading">#</a></h2>
+<p>Inside your local repository:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>olincs<span class="w"> </span>pull
+</pre></div>
+</div>
+<p>If you end up with conflicts, you’ll have to resolve them manually, like in a regular git.</p>
+</section>
+<section id="upload-local-changes">
+<h2>Upload local changes<a class="headerlink" href="#upload-local-changes" title="Link to this heading">#</a></h2>
+<section id="add-files">
+<h3>Add files<a class="headerlink" href="#add-files" title="Link to this heading">#</a></h3>
+<p>Add files with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>nice_picture.png
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>*.bib
+</pre></div>
+</div>
+</section>
+<section id="remove-files">
+<h3>Remove files<a class="headerlink" href="#remove-files" title="Link to this heading">#</a></h3>
+<p>Don’t. Remove files on server side and do <code class="docutils literal notranslate"><span class="pre">olincs</span> <span class="pre">pull</span></code>.</p>
+</section>
+<section id="commit-changes">
+<h3>Commit changes<a class="headerlink" href="#commit-changes" title="Link to this heading">#</a></h3>
+<p>Commit files with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>, e.g.:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Modification description&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="push">
+<h3>Push<a class="headerlink" href="#push" title="Link to this heading">#</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>olincs<span class="w"> </span>push
+</pre></div>
+</div>
+<p>Note that <a class="reference external" href="OLG">OverLincs Git</a> automatically performs a <code class="docutils literal notranslate"><span class="pre">pull</span></code> before <code class="docutils literal notranslate"><span class="pre">pushing</span></code> so you do not need to do it manually.</p>
+</section>
+</section>
 </section>
 
 
@@ -482,11 +531,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="tutorials/index.html"
+       href="reference/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorials</p>
+        <p class="prev-next-title">Reference</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -498,6 +547,25 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cloning-an-overlincs-repository">Cloning an OverLincs repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-remote-changes">Retrieve remote changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upload-local-changes">Upload local changes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-files">Add files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-files">Remove files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-changes">Commit changes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push">Push</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 

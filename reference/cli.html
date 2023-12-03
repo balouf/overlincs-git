@@ -1,0 +1,1129 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Command line interface &#8212; OverLINCS Git 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script src="../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/cli';</script>
+    <link rel="icon" href="../_static/olincs-logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API Reference" href="api.html" />
+    <link rel="prev" title="Reference" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/olincs-logo.png" class="logo__image only-light" alt="OverLINCS Git 0.1.0 documentation - Home"/>
+    <script>document.write(`<img src="../_static/olincs-logo.png" class="logo__image only-dark" alt="OverLINCS Git 0.1.0 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../readme.html">
+                        OverLINCS Git
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../usage.html">
+                        Using OverLINCS Git
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributing
+                      </a>
+                    </li>
+                
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../authors.html">
+                        Credits
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../history.html">
+                        History
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/balouf/overlincs-git" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../readme.html">
+                        OverLINCS Git
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../usage.html">
+                        Using OverLINCS Git
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contributing.html">
+                        Contributing
+                      </a>
+                    </li>
+                
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
+                    More
+                </button>
+                <ul id="pst-nav-more-links-2" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../authors.html">
+                        Credits
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../history.html">
+                        History
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/balouf/overlincs-git" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Command line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Reference</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Command...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="command-line-interface">
+<h1>Command line interface<a class="headerlink" href="#command-line-interface" title="Link to this heading">#</a></h1>
+<section id="git-olincs">
+<h2>git olincs<a class="headerlink" href="#git-olincs" title="Link to this heading">#</a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>olincs<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</pre></div>
+</div>
+<section id="git-olincs-clone">
+<h3>clone<a class="headerlink" href="#git-olincs-clone" title="Link to this heading">#</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>olincs<span class="w"> </span>clone<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>PROJET_URL<span class="o">]</span><span class="w"> </span><span class="o">[</span>DIRECTORY<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-https-cert-check">
+<span id="cmdoption-git-olincs-clone-no-https-cert-check"></span><span class="sig-name descname"><span class="pre">--https-cert-check</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-https-cert-check</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-clone-https-cert-check" title="Link to this definition">#</a></dt>
+<dd><p>force to check https certificate or not</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-whole-project-download">
+<span id="cmdoption-git-olincs-clone-no-whole-project-download"></span><span class="sig-name descname"><span class="pre">--whole-project-download</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-whole-project-download</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-clone-whole-project-download" title="Link to this definition">#</a></dt>
+<dd><p>download whole project in a zip file from the server/ or download
+sequentially file by file from the server</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-b">
+<span id="cmdoption-git-olincs-clone-git-branch"></span><span class="sig-name descname"><span class="pre">-b</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--git-branch</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;git_branch&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-clone-b" title="Link to this definition">#</a></dt>
+<dd><p>The name of a branch. We will commit the changes from Sharelatex on this branch.</p>
+<p>Default: __remote__sharelatex__</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-ignore-saved-user-info">
+<span class="sig-name descname"><span class="pre">--ignore-saved-user-info</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;ignore_saved_user_info&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-clone-ignore-saved-user-info" title="Link to this definition">#</a></dt>
+<dd><p>Forget user account information already saved (in OS keyring system)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-save-password">
+<span id="cmdoption-git-olincs-clone-no-save-password"></span><span class="sig-name descname"><span class="pre">--save-password</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-save-password</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-clone-save-password" title="Link to this definition">#</a></dt>
+<dd><p>Save user account information (in OS keyring system)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-p">
+<span id="cmdoption-git-olincs-clone-password"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--password</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;password&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-clone-p" title="Link to this definition">#</a></dt>
+<dd><p>User password for sharelatex server, if password is not provided,
+it will be asked online</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-u">
+<span id="cmdoption-git-olincs-clone-username"></span><span class="sig-name descname"><span class="pre">-u</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--username</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;username&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-clone-u" title="Link to this definition">#</a></dt>
+<dd><p>Username for sharelatex server account, if username is not provided,
+it will be asked online</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-a">
+<span id="cmdoption-git-olincs-clone-auth_type"></span><span class="sig-name descname"><span class="pre">-a</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--auth_type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;auth_type&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-clone-a" title="Link to this definition">#</a></dt>
+<dd><p>Authentication type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gitlab | community | legacy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-d">
+<span id="cmdoption-git-olincs-clone-debug"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--debug</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-clone-d" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-s">
+<span id="cmdoption-git-olincs-clone-silent"></span><span class="sig-name descname"><span class="pre">-s</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--silent</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-clone-s" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-v">
+<span id="cmdoption-git-olincs-clone-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-clone-v" title="Link to this definition">#</a></dt>
+<dd><p>verbose level (can be: -v, -vv, -vvv)</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-arg-PROJET_URL">
+<span class="sig-name descname"><span class="pre">PROJET_URL</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-clone-arg-PROJET_URL" title="Link to this definition">#</a></dt>
+<dd><p>Optional argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-clone-arg-DIRECTORY">
+<span class="sig-name descname"><span class="pre">DIRECTORY</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-clone-arg-DIRECTORY" title="Link to this definition">#</a></dt>
+<dd><p>Optional argument</p>
+</dd></dl>
+
+</section>
+<section id="git-olincs-compile">
+<h3>compile<a class="headerlink" href="#git-olincs-compile" title="Link to this heading">#</a></h3>
+<p>Compile the remote version of a project</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>olincs<span class="w"> </span>compile<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>PROJECT_ID<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-compile-ignore-saved-user-info">
+<span class="sig-name descname"><span class="pre">--ignore-saved-user-info</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;ignore_saved_user_info&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-compile-ignore-saved-user-info" title="Link to this definition">#</a></dt>
+<dd><p>Forget user account information already saved (in OS keyring system)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-compile-save-password">
+<span id="cmdoption-git-olincs-compile-no-save-password"></span><span class="sig-name descname"><span class="pre">--save-password</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-save-password</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-compile-save-password" title="Link to this definition">#</a></dt>
+<dd><p>Save user account information (in OS keyring system)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-compile-p">
+<span id="cmdoption-git-olincs-compile-password"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--password</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;password&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-compile-p" title="Link to this definition">#</a></dt>
+<dd><p>User password for sharelatex server, if password is not provided,
+it will be asked online</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-compile-u">
+<span id="cmdoption-git-olincs-compile-username"></span><span class="sig-name descname"><span class="pre">-u</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--username</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;username&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-compile-u" title="Link to this definition">#</a></dt>
+<dd><p>Username for sharelatex server account, if username is not provided,
+it will be asked online</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-compile-a">
+<span id="cmdoption-git-olincs-compile-auth_type"></span><span class="sig-name descname"><span class="pre">-a</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--auth_type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;auth_type&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-compile-a" title="Link to this definition">#</a></dt>
+<dd><p>Authentication type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gitlab | community | legacy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-compile-d">
+<span id="cmdoption-git-olincs-compile-debug"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--debug</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-compile-d" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-compile-s">
+<span id="cmdoption-git-olincs-compile-silent"></span><span class="sig-name descname"><span class="pre">-s</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--silent</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-compile-s" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-compile-v">
+<span id="cmdoption-git-olincs-compile-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-compile-v" title="Link to this definition">#</a></dt>
+<dd><p>verbose level (can be: -v, -vv, -vvv)</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-compile-arg-PROJECT_ID">
+<span class="sig-name descname"><span class="pre">PROJECT_ID</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-compile-arg-PROJECT_ID" title="Link to this definition">#</a></dt>
+<dd><p>Optional argument</p>
+</dd></dl>
+
+</section>
+<section id="git-olincs-new">
+<h3>new<a class="headerlink" href="#git-olincs-new" title="Link to this heading">#</a></h3>
+<p>Upload the current directory as a new sharelatex project.</p>
+<p>This literally creates a new remote project in sync with the local version.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>olincs<span class="w"> </span>new<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>PROJECTNAME<span class="w"> </span>BASE_URL
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-https-cert-check">
+<span id="cmdoption-git-olincs-new-no-https-cert-check"></span><span class="sig-name descname"><span class="pre">--https-cert-check</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-https-cert-check</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-new-https-cert-check" title="Link to this definition">#</a></dt>
+<dd><p>force to check https certificate or not</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-whole-project-upload">
+<span id="cmdoption-git-olincs-new-no-whole-project-upload"></span><span class="sig-name descname"><span class="pre">--whole-project-upload</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-whole-project-upload</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-new-whole-project-upload" title="Link to this definition">#</a></dt>
+<dd><p>upload whole project in a zip file to the server/ or
+upload sequentially file by file to the server</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-rate-max-uploads-by-sec">
+<span class="sig-name descname"><span class="pre">--rate-max-uploads-by-sec</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;rate_max_uploads_by_sec&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-new-rate-max-uploads-by-sec" title="Link to this definition">#</a></dt>
+<dd><p>number of max uploads
+by seconds to the server (some servers limit the this rate),
+useful with –no-whole-project-upload</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-b">
+<span id="cmdoption-git-olincs-new-git-branch"></span><span class="sig-name descname"><span class="pre">-b</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--git-branch</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;git_branch&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-new-b" title="Link to this definition">#</a></dt>
+<dd><p>The name of a branch. We will commit the changes from Sharelatex on this branch.</p>
+<p>Default: __remote__sharelatex__</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-ignore-saved-user-info">
+<span class="sig-name descname"><span class="pre">--ignore-saved-user-info</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;ignore_saved_user_info&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-new-ignore-saved-user-info" title="Link to this definition">#</a></dt>
+<dd><p>Forget user account information already saved (in OS keyring system)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-save-password">
+<span id="cmdoption-git-olincs-new-no-save-password"></span><span class="sig-name descname"><span class="pre">--save-password</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-save-password</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-new-save-password" title="Link to this definition">#</a></dt>
+<dd><p>Save user account information (in OS keyring system)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-p">
+<span id="cmdoption-git-olincs-new-password"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--password</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;password&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-new-p" title="Link to this definition">#</a></dt>
+<dd><p>User password for sharelatex server, if password is not provided,
+it will be asked online</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-u">
+<span id="cmdoption-git-olincs-new-username"></span><span class="sig-name descname"><span class="pre">-u</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--username</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;username&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-new-u" title="Link to this definition">#</a></dt>
+<dd><p>Username for sharelatex server account, if username is not provided,
+it will be asked online</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-a">
+<span id="cmdoption-git-olincs-new-auth_type"></span><span class="sig-name descname"><span class="pre">-a</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--auth_type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;auth_type&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-new-a" title="Link to this definition">#</a></dt>
+<dd><p>Authentication type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gitlab | community | legacy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-d">
+<span id="cmdoption-git-olincs-new-debug"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--debug</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-new-d" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-s">
+<span id="cmdoption-git-olincs-new-silent"></span><span class="sig-name descname"><span class="pre">-s</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--silent</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-new-s" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-v">
+<span id="cmdoption-git-olincs-new-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-new-v" title="Link to this definition">#</a></dt>
+<dd><p>verbose level (can be: -v, -vv, -vvv)</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-arg-PROJECTNAME">
+<span class="sig-name descname"><span class="pre">PROJECTNAME</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-new-arg-PROJECTNAME" title="Link to this definition">#</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-new-arg-BASE_URL">
+<span class="sig-name descname"><span class="pre">BASE_URL</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-new-arg-BASE_URL" title="Link to this definition">#</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</section>
+<section id="git-olincs-pull">
+<h3>pull<a class="headerlink" href="#git-olincs-pull" title="Link to this heading">#</a></h3>
+<p>Pull the files from sharelatex.</p>
+<p>In the current repository, it works as follows:</p>
+<p>1. Pull in the latest version of the remote project in <code class="docutils literal notranslate"><span class="pre">__remote__sharelatex__</span></code>
+respectively the given branch.</p>
+<ol class="arabic simple" start="2">
+<li><p>Attempt a merge in the working branch. If the merge can’t be done automatically,
+you will be required to fix the conflict manually</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>olincs<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-pull-b">
+<span id="cmdoption-git-olincs-pull-git-branch"></span><span class="sig-name descname"><span class="pre">-b</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--git-branch</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;git_branch&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-pull-b" title="Link to this definition">#</a></dt>
+<dd><p>The name of a branch. We will commit the changes from Sharelatex on this branch.</p>
+<p>Default: __remote__sharelatex__</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-pull-ignore-saved-user-info">
+<span class="sig-name descname"><span class="pre">--ignore-saved-user-info</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;ignore_saved_user_info&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-pull-ignore-saved-user-info" title="Link to this definition">#</a></dt>
+<dd><p>Forget user account information already saved (in OS keyring system)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-pull-save-password">
+<span id="cmdoption-git-olincs-pull-no-save-password"></span><span class="sig-name descname"><span class="pre">--save-password</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-save-password</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-pull-save-password" title="Link to this definition">#</a></dt>
+<dd><p>Save user account information (in OS keyring system)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-pull-p">
+<span id="cmdoption-git-olincs-pull-password"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--password</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;password&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-pull-p" title="Link to this definition">#</a></dt>
+<dd><p>User password for sharelatex server, if password is not provided,
+it will be asked online</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-pull-u">
+<span id="cmdoption-git-olincs-pull-username"></span><span class="sig-name descname"><span class="pre">-u</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--username</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;username&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-pull-u" title="Link to this definition">#</a></dt>
+<dd><p>Username for sharelatex server account, if username is not provided,
+it will be asked online</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-pull-a">
+<span id="cmdoption-git-olincs-pull-auth_type"></span><span class="sig-name descname"><span class="pre">-a</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--auth_type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;auth_type&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-pull-a" title="Link to this definition">#</a></dt>
+<dd><p>Authentication type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gitlab | community | legacy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-pull-d">
+<span id="cmdoption-git-olincs-pull-debug"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--debug</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-pull-d" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-pull-s">
+<span id="cmdoption-git-olincs-pull-silent"></span><span class="sig-name descname"><span class="pre">-s</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--silent</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-pull-s" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-pull-v">
+<span id="cmdoption-git-olincs-pull-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-pull-v" title="Link to this definition">#</a></dt>
+<dd><p>verbose level (can be: -v, -vv, -vvv)</p>
+</dd></dl>
+
+</section>
+<section id="git-olincs-push">
+<h3>push<a class="headerlink" href="#git-olincs-push" title="Link to this heading">#</a></h3>
+<p>Synchronize the local copy with the remote version.</p>
+<p>This works as follows:</p>
+<ol class="arabic simple">
+<li><p>The remote version is pulled (see the <strong class="program">pull</strong> command)</p></li>
+</ol>
+<p>2. After the merge succeed, the merged version is uploaded back to the remote
+server.</p>
+<blockquote>
+<div><p>Note that only the files that have changed (modified/added/removed) will
+be uploaded.</p>
+</div></blockquote>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>olincs<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-push-force">
+<span class="sig-name descname"><span class="pre">--force</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-push-force" title="Link to this definition">#</a></dt>
+<dd><p>Force push</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-push-b">
+<span id="cmdoption-git-olincs-push-git-branch"></span><span class="sig-name descname"><span class="pre">-b</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--git-branch</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;git_branch&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-push-b" title="Link to this definition">#</a></dt>
+<dd><p>The name of a branch. We will commit the changes from Sharelatex on this branch.</p>
+<p>Default: __remote__sharelatex__</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-push-0">
+<span class="sig-name descname"><span class="pre">--force</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-push-0" title="Link to this definition">#</a></dt>
+<dd><p>Force push</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-push-ignore-saved-user-info">
+<span class="sig-name descname"><span class="pre">--ignore-saved-user-info</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;ignore_saved_user_info&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-push-ignore-saved-user-info" title="Link to this definition">#</a></dt>
+<dd><p>Forget user account information already saved (in OS keyring system)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-push-save-password">
+<span id="cmdoption-git-olincs-push-no-save-password"></span><span class="sig-name descname"><span class="pre">--save-password</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-save-password</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-push-save-password" title="Link to this definition">#</a></dt>
+<dd><p>Save user account information (in OS keyring system)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-push-p">
+<span id="cmdoption-git-olincs-push-password"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--password</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;password&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-push-p" title="Link to this definition">#</a></dt>
+<dd><p>User password for sharelatex server, if password is not provided,
+it will be asked online</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-push-u">
+<span id="cmdoption-git-olincs-push-username"></span><span class="sig-name descname"><span class="pre">-u</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--username</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;username&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-push-u" title="Link to this definition">#</a></dt>
+<dd><p>Username for sharelatex server account, if username is not provided,
+it will be asked online</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-push-a">
+<span id="cmdoption-git-olincs-push-auth_type"></span><span class="sig-name descname"><span class="pre">-a</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--auth_type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;auth_type&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-push-a" title="Link to this definition">#</a></dt>
+<dd><p>Authentication type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gitlab | community | legacy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-push-d">
+<span id="cmdoption-git-olincs-push-debug"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--debug</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-push-d" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-push-s">
+<span id="cmdoption-git-olincs-push-silent"></span><span class="sig-name descname"><span class="pre">-s</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--silent</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-push-s" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-push-v">
+<span id="cmdoption-git-olincs-push-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-push-v" title="Link to this definition">#</a></dt>
+<dd><p>verbose level (can be: -v, -vv, -vvv)</p>
+</dd></dl>
+
+</section>
+<section id="git-olincs-share">
+<h3>share<a class="headerlink" href="#git-olincs-share" title="Link to this heading">#</a></h3>
+<p>Send an invitation to share (edit/view) a project</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>olincs<span class="w"> </span>share<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>EMAIL<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-share-project_id">
+<span class="sig-name descname"><span class="pre">--project_id</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;project_id&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-share-project_id" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-share-can-edit">
+<span id="cmdoption-git-olincs-share-read-only"></span><span class="sig-name descname"><span class="pre">--can-edit</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--read-only</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-share-can-edit" title="Link to this definition">#</a></dt>
+<dd><p>Authorize user to edit the project or not</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-share-ignore-saved-user-info">
+<span class="sig-name descname"><span class="pre">--ignore-saved-user-info</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;ignore_saved_user_info&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-share-ignore-saved-user-info" title="Link to this definition">#</a></dt>
+<dd><p>Forget user account information already saved (in OS keyring system)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-share-save-password">
+<span id="cmdoption-git-olincs-share-no-save-password"></span><span class="sig-name descname"><span class="pre">--save-password</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--no-save-password</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-share-save-password" title="Link to this definition">#</a></dt>
+<dd><p>Save user account information (in OS keyring system)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-share-p">
+<span id="cmdoption-git-olincs-share-password"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--password</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;password&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-share-p" title="Link to this definition">#</a></dt>
+<dd><p>User password for sharelatex server, if password is not provided,
+it will be asked online</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-share-u">
+<span id="cmdoption-git-olincs-share-username"></span><span class="sig-name descname"><span class="pre">-u</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--username</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;username&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-share-u" title="Link to this definition">#</a></dt>
+<dd><p>Username for sharelatex server account, if username is not provided,
+it will be asked online</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-share-a">
+<span id="cmdoption-git-olincs-share-auth_type"></span><span class="sig-name descname"><span class="pre">-a</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--auth_type</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;auth_type&gt;</span></span><a class="headerlink" href="#cmdoption-git-olincs-share-a" title="Link to this definition">#</a></dt>
+<dd><p>Authentication type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gitlab | community | legacy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-share-d">
+<span id="cmdoption-git-olincs-share-debug"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--debug</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-share-d" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-share-s">
+<span id="cmdoption-git-olincs-share-silent"></span><span class="sig-name descname"><span class="pre">-s</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--silent</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-share-s" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-share-v">
+<span id="cmdoption-git-olincs-share-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-share-v" title="Link to this definition">#</a></dt>
+<dd><p>verbose level (can be: -v, -vv, -vvv)</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-share-arg-EMAIL">
+<span class="sig-name descname"><span class="pre">EMAIL</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-share-arg-EMAIL" title="Link to this definition">#</a></dt>
+<dd><p>Optional argument</p>
+</dd></dl>
+
+</section>
+<section id="git-olincs-test">
+<h3>test<a class="headerlink" href="#git-olincs-test" title="Link to this heading">#</a></h3>
+<p>test log levels</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>olincs<span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-test-d">
+<span id="cmdoption-git-olincs-test-debug"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--debug</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-test-d" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-test-s">
+<span id="cmdoption-git-olincs-test-silent"></span><span class="sig-name descname"><span class="pre">-s</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--silent</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-test-s" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-git-olincs-test-v">
+<span id="cmdoption-git-olincs-test-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-git-olincs-test-v" title="Link to this definition">#</a></dt>
+<dd><p>verbose level (can be: -v, -vv, -vvv)</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Reference</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="api.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">API Reference</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-olincs">git olincs</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-olincs-clone">clone</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-olincs-compile">compile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-olincs-new">new</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-olincs-pull">pull</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-olincs-push">push</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-olincs-share">share</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-olincs-test">test</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/reference/cli.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Fabien Mathieu.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

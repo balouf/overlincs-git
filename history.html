@@ -38,8 +38,8 @@
     <script src="_static/documentation_options.js?v=01f34227"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'history';</script>
+    <link rel="icon" href="_static/olincs-logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Credits" href="authors.html" />
@@ -115,8 +115,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="_static/olincs-logo.png" class="logo__image only-light" alt="OverLINCS Git 0.1.0 documentation - Home"/>
+    <script>document.write(`<img src="_static/olincs-logo.png" class="logo__image only-dark" alt="OverLINCS Git 0.1.0 documentation - Home"/>`);</script>
   
-    <p class="title logo__title">OverLINCS Git 0.1.0 documentation</p>
   
 </a></div>
     
@@ -152,14 +158,7 @@
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="usage.html">
-                        Usage
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="tutorials/index.html">
-                        Tutorials
+                        Using OverLINCS Git
                       </a>
                     </li>
                 
@@ -170,19 +169,19 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="contributing.html">
+                        Contributing
+                      </a>
+                    </li>
+                
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="contributing.html">
-                        Contributing
-                      </a>
-                    </li>
-                
-
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="authors.html">
                         Credits
@@ -316,14 +315,7 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="usage.html">
-                        Usage
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="tutorials/index.html">
-                        Tutorials
+                        Using OverLINCS Git
                       </a>
                     </li>
                 
@@ -334,19 +326,19 @@ document.write(`
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="contributing.html">
+                        Contributing
+                      </a>
+                    </li>
+                
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
                     More
                 </button>
                 <ul id="pst-nav-more-links-2" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="contributing.html">
-                        Contributing
-                      </a>
-                    </li>
-                
-
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="authors.html">
                         Credits
@@ -456,8 +448,18 @@ document.write(`
   <section id="history">
 <h1>History<a class="headerlink" href="#history" title="Link to this heading">#</a></h1>
 <section id="first-release">
-<h2>0.1.0 (2023-12-01): First release<a class="headerlink" href="#first-release" title="Link to this heading">#</a></h2>
+<h2>0.1.0 (2023-12-03): First release<a class="headerlink" href="#first-release" title="Link to this heading">#</a></h2>
 <ul class="simple">
+<li><p>CLI renamed from slatex to olincs.</p></li>
+<li><p>Fix compatibility with overleaf v4:</p>
+<ul>
+<li><p>Docs pull update: change ref tag from “_id” (now unavailable) to “fullname”.</p></li>
+<li><p>Docs pull update: add offset to time to adjust nsync discrepancies.</p></li>
+<li><p>Push: update upload POST command.</p></li>
+</ul>
+</li>
+<li><p>Remove the “no untracked file” requirements as most users don’t gitignore the latex produced files.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">community</span></code> (v4) as the default authentication method.</p></li>
 <li><p>First release on PyPI.</p></li>
 </ul>
 </section>
@@ -498,7 +500,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-release">0.1.0 (2023-12-01): First release</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-release">0.1.0 (2023-12-03): First release</a></li>
 </ul>
   </nav></div>
 
