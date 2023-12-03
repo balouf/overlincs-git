@@ -448,15 +448,15 @@ document.write(`
                   
   <section id="using-overlincs-git">
 <h1>Using OverLINCS Git<a class="headerlink" href="#using-overlincs-git" title="Link to this heading">#</a></h1>
-<p><a class="reference external" href="OCE">Overleaf Community Edition</a> doesn’t provide native Git-like functionalities,
-but Irisa has built a nice <a class="reference external" href="SLX">Git bridge</a> from which <a class="reference external" href="OLG">OverLincs Git</a> builds upon.</p>
+<p><a class="reference external" href="https://github.com/overleaf/overleaf">Overleaf Community Edition</a> doesn’t provide native Git-like functionalities,
+but Irisa has built a nice <a class="reference external" href="https://gitlab.inria.fr/sed-rennes/sharelatex/python-sharelatex">Git bridge</a> from which <a class="reference external" href="https://balouf.github.io/overlincs-git/">OverLincs Git</a> builds upon.</p>
 <p>The idea is to have a regular git installed locally,
 with an emulation of a remote git provided by the bridge.</p>
 <p>In short:</p>
 <ul class="simple">
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">olincs</span></code> instead of <code class="docutils literal notranslate"><span class="pre">git</span></code> for <code class="docutils literal notranslate"><span class="pre">clone</span></code>, <code class="docutils literal notranslate"><span class="pre">push</span></code>, and <code class="docutils literal notranslate"><span class="pre">pull</span></code>, i.e. all remote interactions.</p></li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">git</span></code> for <code class="docutils literal notranslate"><span class="pre">commit</span></code> and <code class="docutils literal notranslate"><span class="pre">add</span></code>, i.e. purely local updates.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span></code> is not fully supported. File deletion should be performed directly on <a class="reference external" href="OL">OverLincs</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span></code> is not fully supported. File deletion should be performed directly on <a class="reference external" href="https://overleaf.lincs.fr">OverLincs</a>.</p></li>
 <li><p>As a general rule, other commands should be avoided, OverLincs Git only addresses the basic pull/commit/push cycle.</p></li>
 </ul>
 <p>Note: you can also use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">olincs</span> <span class="pre">clone/pull/push</span></code> if you prefer.</p>
@@ -506,7 +506,7 @@ with an emulation of a remote git provided by the bridge.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>olincs<span class="w"> </span>push
 </pre></div>
 </div>
-<p>Note that <a class="reference external" href="OLG">OverLincs Git</a> automatically performs a <code class="docutils literal notranslate"><span class="pre">pull</span></code> before <code class="docutils literal notranslate"><span class="pre">pushing</span></code> so you do not need to do it manually.</p>
+<p>Note that <a class="reference external" href="https://balouf.github.io/overlincs-git/">OverLincs Git</a> automatically performs a <code class="docutils literal notranslate"><span class="pre">pull</span></code> before <code class="docutils literal notranslate"><span class="pre">pushing</span></code> so you do not need to do it manually.</p>
 </section>
 </section>
 </section>
