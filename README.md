@@ -1,5 +1,6 @@
 # OverLINCS Git
 
+![OLG logo](https://raw.githubusercontent.com/balouf/overlincs-git/e10698038e956b737dec5c31a7e4ad3a719c7345/docs/olincs-logo.png)
 
 [![PyPI Status](https://img.shields.io/pypi/v/overlincs-git.svg)](https://pypi.python.org/pypi/overlincs-git)
 [![Build Status](https://github.com/balouf/overlincs-git/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/balouf/overlincs-git/actions?query=workflow%3Abuild)
